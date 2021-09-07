@@ -45,10 +45,10 @@
               <h4>Memory</h4>
               <div class="grid grid-cols-2 gap-4 mt-2 text-white text-center">
                 <div class="bg-purple-600 bg-opacity-75">
-                  <button id="memory-cost-1"  class="p-2">8 Gb Memory</button>
+                  <button onclick="defaultCost()"  id="memory-slot-1"   class="p-2">8 Gb Memory</button>
                 </div>
                 <div class="bg-purple-600 bg-opacity-75">
-                  <button id="memory-cost-2" class="p-2">16 Gb Memory</button>
+                  <button   id="memory-slot-2" class="p-2">16 Gb Memory</button>
                 </div>
               </div>
             </div>
@@ -57,13 +57,13 @@
               <h4>Storage</h4>
               <div class="grid grid-cols-3 gap-4 mt-2 text-white text-center">
                 <div class="bg-purple-600 bg-opacity-75">
-                    <button id="storage-slot-1" class="p-2">256 Gb ssd</button>
+                    <button onclick="defaultCost()"  id="storage-slot-1" class="p-2">256 Gb ssd</button>
                   </div>
                   <div class="bg-purple-600 bg-opacity-75">
-                    <button id="storage-slot-1" class="p-2"> 512 Gb ssd</button>
+                    <button  id="storage-slot-2" class="p-2">512 Gb ssd</button>
                   </div>
                   <div class="bg-purple-600 bg-opacity-75">
-                    <button id="storage-slot-1" class="p-2">1 Tb ssd </button>
+                    <button  id="storage-slot-3" class="p-2">1 Tb ssd </button>
                   </div>
             </div>           
           </div>
@@ -73,10 +73,10 @@
 
             <div class="grid grid-cols-2 gap-4 mt-2 text-white text-center">
               <div class="bg-purple-600 bg-opacity-75">
-                <button class="p-2">August 25,friday free delivery</button>
+                <button onclick="defaultCost()" class="p-2">August 25,friday free delivery</button>
               </div>
               <div class="bg-purple-600 bg-opacity-75">
-                <button class="p-2">
+                <button onclick="delivery2()"  id="delivery-cost-2" class="p-2">
                   August 21,friday delivery charge $20
                 </button>
               </div>
@@ -90,15 +90,15 @@
             </div>
             <div class="flex">
                 <p>Extra Memory Cost</p>
-                <p class="ml-72">$ <span id="memory-cost">1299</span></p>
+                <p class="ml-72">$ <span id="memory-cost">000</span></p>
             </div>
             <div class="flex">
                 <p>Extra  Storage  Cost</p>
-                <p class="ml-72">$ <span id="storage-cost">1299</span></p>
+                <p class="ml-72">$ <span id="storage-cost">000</span></p>
             </div>
             <div class="flex">
                 <p>Delivery Charge</p>
-                <p class="ml-80">$ <span id="delivery-cost">1299</span></p>
+                <p class="ml-80">$ <span id="delivery-cost">000</span></p>
             </div>
             <hr class="h-4 ">
             <div class="flex">
@@ -109,13 +109,13 @@
                 <div>
                     <!-- <label for="email-address" class="sr-only">Cupon Code</label> -->
                    <div class="flex gap-x-12">
-                    <input id="email-address" name="email" type="email" autocomplete="email" required class="mt-12   px-3 border border-gray-300 placeholder-gray-500   rounded-t-md   focus:border-indigo-500 sm:text-sm" placeholder="Cupon Code">
-                    <button id="cupon-price" type="button" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-8  ">   Apply                      </button>
+                    <input id="cupon-code" name="email" type="email" autocomplete="email" required class="mt-12   px-3 border border-gray-300 placeholder-gray-500   rounded-t-md   focus:border-indigo-500 sm:text-sm" placeholder="Cupon Code">
+                    <button id="btn-Cupon" type="button" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-8  ">   Apply                      </button>
                    </div>
                   </div>
             </form>
             <div class="flex">
-                <p id="total-price" class="m-12">Total Price : $ <span >1299</span</p>                 
+                <p   class="m-12">Total Price : $ <span id="total-price" >1299</span</p>                 
             </div>
         </section>  
         </section>             
