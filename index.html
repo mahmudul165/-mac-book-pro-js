@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="min.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Mac-Book-Pro</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="flex items-center gap-x-12">
+        <section>
+          <img width="200px" height="200px" src="images/mac.png" alt="" />
+        </section>
+        <section class="">
+          <h2 class="font-bold text-2xl">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            odio reiciendis deserunt impedit quod deleniti assumenda veritatis
+            quam in consequuntur.
+          </p>
+
+          <div
+            class="
+               
+              font-bold
+              text-2xl              
+              grid grid-rows-3
+              w-5/6
+              mt-12
+              items-center
+               
+            "
+          >
+          <!--  memory   -->
+            <div class="">
+              <h4>Memory</h4>
+              <div class="grid grid-cols-2 gap-4 mt-2 text-white text-center">
+                <div class="bg-purple-600 bg-opacity-75">
+                  <button id="memory-cost-1"  class="p-2">8 Gb Memory</button>
+                </div>
+                <div class="bg-purple-600 bg-opacity-75">
+                  <button id="memory-cost-2" class="p-2">16 Gb Memory</button>
+                </div>
+              </div>
+            </div>
+            <!--  sorage  -->
+            <div>
+              <h4>Storage</h4>
+              <div class="grid grid-cols-3 gap-4 mt-2 text-white text-center">
+                <div class="bg-purple-600 bg-opacity-75">
+                    <button id="storage-slot-1" class="p-2">256 Gb ssd</button>
+                  </div>
+                  <div class="bg-purple-600 bg-opacity-75">
+                    <button id="storage-slot-1" class="p-2"> 512 Gb ssd</button>
+                  </div>
+                  <div class="bg-purple-600 bg-opacity-75">
+                    <button id="storage-slot-1" class="p-2">1 Tb ssd </button>
+                  </div>
+            </div>           
+          </div>
+          <!-- delivery   -->
+          <div>
+            <h4>Delivery option</h4>
+
+            <div class="grid grid-cols-2 gap-4 mt-2 text-white text-center">
+              <div class="bg-purple-600 bg-opacity-75">
+                <button class="p-2">August 25,friday free delivery</button>
+              </div>
+              <div class="bg-purple-600 bg-opacity-75">
+                <button class="p-2">
+                  August 21,friday delivery charge $20
+                </button>
+              </div>
+            </div>
+          </div>
+           <!-- calculate price section -->
+        <section class="font-bold mt-12  text-center">
+            <div class="flex">
+                <p>Best  Price</p>
+                <p class="ml-96">$ <span>1299</span></p>
+            </div>
+            <div class="flex">
+                <p>Extra Memory Cost</p>
+                <p class="ml-72">$ <span id="memory-cost">1299</span></p>
+            </div>
+            <div class="flex">
+                <p>Extra  Storage  Cost</p>
+                <p class="ml-72">$ <span id="storage-cost">1299</span></p>
+            </div>
+            <div class="flex">
+                <p>Delivery Charge</p>
+                <p class="ml-80">$ <span id="delivery-cost">1299</span></p>
+            </div>
+            <hr class="h-4 ">
+            <div class="flex">
+                <p>Total Price</p>
+                <p class="ml-96">$ <span id="total-cost">1299</span></p>
+            </div>
+            <form action="">
+                <div>
+                    <!-- <label for="email-address" class="sr-only">Cupon Code</label> -->
+                   <div class="flex gap-x-12">
+                    <input id="email-address" name="email" type="email" autocomplete="email" required class="mt-12   px-3 border border-gray-300 placeholder-gray-500   rounded-t-md   focus:border-indigo-500 sm:text-sm" placeholder="Cupon Code">
+                    <button id="cupon-price" type="button" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-8  ">   Apply                      </button>
+                   </div>
+                  </div>
+            </form>
+            <div class="flex">
+                <p id="total-price" class="m-12">Total Price : $ <span >1299</span</p>                 
+            </div>
+        </section>  
+        </section>             
+      </section>
+    </main>
+    <script src="JS/app.js"></script>
+  </body>
+</html>
+
