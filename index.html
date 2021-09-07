@@ -13,10 +13,10 @@
   </head>
   <body>
     <header></header>
-    <main>
+    <main class="m-16">
       <section class="flex items-center gap-x-12">
-        <section>
-          <img width="200px" height="200px" src="images/mac.png" alt="" />
+        <section class="p-8">
+          <img width="600px" height="100%" src="images/mac.png" alt="" />
         </section>
         <section class="">
           <h2 class="font-bold text-2xl">
@@ -76,7 +76,7 @@
                 <button onclick="defaultCost()" class="p-2">August 25,friday free delivery</button>
               </div>
               <div class="bg-purple-600 bg-opacity-75">
-                <button onclick="delivery2()"  id="delivery-cost-2" class="p-2">
+                <button   id="delivery-cost-2" class="p-2">
                   August 21,friday delivery charge $20
                 </button>
               </div>
@@ -106,11 +106,13 @@
                 <p class="ml-96">$ <span id="total-cost">1299</span></p>
             </div>
             <form action="">
-                <div>
-                    <!-- <label for="email-address" class="sr-only">Cupon Code</label> -->
-                   <div class="flex gap-x-12">
-                    <input id="cupon-code" name="email" type="email" autocomplete="email" required class="mt-12   px-3 border border-gray-300 placeholder-gray-500   rounded-t-md   focus:border-indigo-500 sm:text-sm" placeholder="Cupon Code">
-                    <button id="btn-Cupon" type="button" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-8  ">   Apply                      </button>
+                <div class="mt-8">
+                    <label class="mt-16   text-green-400 p-4" for="uname"><b>Cupon Code</b></label>
+                   <div class="flex gap-x-12 my-12">
+                    
+                    <input id="cupon-code" name="cupon" type="password"  placeholder="Cupon Code">
+
+                    <button  id="btn-Cupon" class="bg-gradient-to-r from-green-400 to-blue-500  px-8  "> Apply                      </button>
                    </div>
                   </div>
             </form>

@@ -4,7 +4,7 @@ function defaultCost() {
   document.getElementById("delivery-cost").innerText = "000";
   document.getElementById("total-cost").innerText = "1299";
 }
-// memory
+/********* memory ********/
 const mamoryStorage = document.getElementById("memory-slot-2");
 mamoryStorage.addEventListener("click", function (event) {
   const memoryCost = document.getElementById("memory-cost");
@@ -16,7 +16,7 @@ mamoryStorage.addEventListener("click", function (event) {
     parseFloat(memoryCost.innerText) + parseFloat(TotalCost.innerText);
 });
 
-// storage
+/********* storage ********/
 const btnStorage2 = document.getElementById("storage-slot-2");
 btnStorage2.addEventListener("click", function (event) {
   //console.log("i miss u");
@@ -39,26 +39,32 @@ btnStorage3.addEventListener("click", function (event) {
   // console.log(TotalCost.innerText);
 });
 
-// delivery
-function delivery2() {
+/********* delivery ********/
+const btndelivery2 = document.getElementById("delivery-cost-2");
+btndelivery2.addEventListener("click", function (event) {
   const deliveryCost = (document.getElementById("delivery-cost").innerText =
     "20");
   const TotalCost = document.getElementById("total-cost");
   TotalCost.innerText =
     parseFloat(deliveryCost) + parseFloat(TotalCost.innerText);
-}
-// addeven listener
+});
+
+/*********addeven listener for cupon code********/
 const btn = document.getElementById("btn-Cupon");
 btn.addEventListener("click", function (event) {
   //console.log(document.getElementById("cupon-code").value);
   const cuponCode = document.getElementById("cupon-code").value;
   if (cuponCode == "hakim") {
+    // button disable
+    document.getElementById("btn-Cupon").disabled = true;
+    // clear input value
+    document.getElementById("cupon-code").value = "";
+    //total amout after cupon
     const TotalPrice = document.getElementById("total-cost");
     console.log(TotalPrice.value);
     const cuponPrice = parseFloat(TotalPrice.innerText) * 0.2;
     const totalAmount = parseFloat(TotalPrice.innerText) - cuponPrice;
     document.getElementById("total-price").innerText = totalAmount;
-    //console.log(parseFloat(TotalPrice.innerText) - cuponPrice);
   } else {
     // document.getElementById("cupon-code").value = "plz enter valid cuppon";
     alert("please enter valid cupon");
