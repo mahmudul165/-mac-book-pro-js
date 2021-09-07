@@ -1,6 +1,12 @@
-function defaultCost() {
+function defaulMemoryCost() {
   document.getElementById("memory-cost").innerText = "000";
+  document.getElementById("total-cost").innerText = "1299";
+}
+function defaultStorageCost() {
   document.getElementById("storage-cost").innerText = "000";
+  document.getElementById("total-cost").innerText = "1299";
+}
+function defaulDeliveryCost() {
   document.getElementById("delivery-cost").innerText = "000";
   document.getElementById("total-cost").innerText = "1299";
 }
@@ -14,6 +20,7 @@ mamoryStorage.addEventListener("click", function (event) {
   console.log(typeof TotalCost.innerText);
   TotalCost.innerText =
     parseFloat(memoryCost.innerText) + parseFloat(TotalCost.innerText);
+  document.getElementById("total-price").innerText = TotalCost.innerText;
 });
 
 /********* storage ********/
@@ -25,6 +32,7 @@ btnStorage2.addEventListener("click", function (event) {
   const TotalCost = document.getElementById("total-cost");
   TotalCost.innerText =
     parseFloat(storageCost.innerText) + parseFloat(TotalCost.innerText);
+  document.getElementById("total-price").innerText = TotalCost.innerText;
 });
 
 const btnStorage3 = document.getElementById("storage-slot-3");
@@ -36,25 +44,27 @@ btnStorage3.addEventListener("click", function (event) {
   // console.log(typeof TotalCost.innerText);
   TotalCost.innerText =
     parseFloat(storageCost.innerText) + parseFloat(TotalCost.innerText);
-  // console.log(TotalCost.innerText);
+  document.getElementById("total-price").innerText = TotalCost.innerText;
 });
 
 /********* delivery ********/
+
 const btndelivery2 = document.getElementById("delivery-cost-2");
 btndelivery2.addEventListener("click", function (event) {
   const deliveryCost = (document.getElementById("delivery-cost").innerText =
     "20");
+  //console.log(typeof deliveryCost);
   const TotalCost = document.getElementById("total-cost");
   TotalCost.innerText =
     parseFloat(deliveryCost) + parseFloat(TotalCost.innerText);
+  document.getElementById("total-price").innerText = TotalCost.innerText;
 });
-
 /*********addeven listener for cupon code********/
 const btn = document.getElementById("btn-Cupon");
 btn.addEventListener("click", function (event) {
   //console.log(document.getElementById("cupon-code").value);
   const cuponCode = document.getElementById("cupon-code").value;
-  if (cuponCode == "hakim") {
+  if (cuponCode == "stevekaku") {
     // button disable
     document.getElementById("btn-Cupon").disabled = true;
     // clear input value
